@@ -1,4 +1,7 @@
 import PersonalForm from '../components/PersonalForm';
+import SkillForm from '../components/SkillForm';
+import ProjectForm from '../components/ProjectForm';
+import EducationForm from '../components/EducationForm';
 
 export default function Editor() {
   return (
@@ -8,8 +11,9 @@ export default function Editor() {
 
       <form onSubmit={(e) => e.preventDefault()}>
         <PersonalForm />
-        
-        {/* Aquí iremos agregando <SkillForm />, <ProjectForm />, etc. */}
+        <SkillForm />
+        <ProjectForm />
+        <EducationForm />
       </form>
     </div>
   );
