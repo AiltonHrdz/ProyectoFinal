@@ -13,7 +13,7 @@ export default function Preview() {
       margin:       10,
       filename:     `${personalData.fullName ? personalData.fullName.replace(/\s+/g, '_') : 'Mi'}_CV.pdf`,
       image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 }, 
+      html2canvas:  { scale: 2, useCORS: true }, 
       jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
@@ -34,12 +34,12 @@ export default function Preview() {
 
       <div id="cv-preview-container" style={{ border: '1px solid #eaeaea', borderRadius: '8px', padding: '40px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
         
-        {/* Cabecera actualizada que incluye la imagen de perfil redonda al lado del nombre */}
         <header style={{ borderBottom: '2px solid #333', paddingBottom: '20px', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '25px' }}>
           {personalData.profileImage && (
             <img 
               src={personalData.profileImage} 
               alt="Foto de perfil" 
+              crossOrigin="anonymous"
               style={{ width: '120px', height: '120px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #eaeaea' }} 
             />
           )}
@@ -100,11 +100,11 @@ export default function Preview() {
                   {projects.map((project, index) => (
                     <article key={index}>
                       <h4 style={{ margin: '0 0 5px 0', fontSize: '16px', color: '#2c3e50' }}>{project.name}</h4>
-                      <p style={{ margin: '0 0 5px 0', fontSize: '13px', fontWeight: 'bold', color: '#6f42c1' }}>{project.technologies}</p>
+                      <p style={{ margin: '0 0 5px 0', fontSize: '13px', fontWeight: 'bold', color: '#6366f1' }}>{project.technologies}</p>
                       <p style={{ margin: '0 0 5px 0', fontSize: '14px', lineHeight: '1.5' }}>{project.description}</p>
                       <div style={{ fontSize: '12px' }}>
-                        {project.repoLink && <a href={project.repoLink} target="_blank" rel="noreferrer" style={{ marginRight: '15px', color: '#007bff', textDecoration: 'none' }}>Repositorio</a>}
-                        {project.deployLink && <a href={project.deployLink} target="_blank" rel="noreferrer" style={{ color: '#28a745', textDecoration: 'none' }}>Ver Deploy</a>}
+                        {project.repoLink && <a href={project.repoLink} target="_blank" rel="noreferrer" style={{ marginRight: '15px', color: '#6366f1', textDecoration: 'none', fontWeight: 'bold' }}>Repositorio</a>}
+                        {project.deployLink && <a href={project.deployLink} target="_blank" rel="noreferrer" style={{ color: '#10b981', textDecoration: 'none', fontWeight: 'bold' }}>Ver Deploy</a>}
                       </div>
                     </article>
                   ))}
