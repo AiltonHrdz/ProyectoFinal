@@ -80,6 +80,19 @@ export default function PersonalForm() {
           />
         </div>
 
+        {/* Nuevo campo para la URL de la imagen de perfil */}
+        <div style={{ gridColumn: '1 / -1' }}>
+          <label style={{ display: 'block', marginBottom: '5px' }}>URL de Imagen de Perfil (Opcional):</label>
+          <input
+            type="url"
+            name="profileImage"
+            value={cvData.personalData.profileImage}
+            onChange={handleChange}
+            placeholder="Ej. https://tu-dominio.com/foto.jpg"
+            style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
+          />
+        </div>
+
         <div style={{ gridColumn: '1 / -1' }}>
           <label style={{ display: 'block', marginBottom: '5px' }}>Descripción o Perfil Profesional:</label>
           <textarea

@@ -34,13 +34,23 @@ export default function Preview() {
 
       <div id="cv-preview-container" style={{ border: '1px solid #eaeaea', borderRadius: '8px', padding: '40px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
         
-        <header style={{ borderBottom: '2px solid #333', paddingBottom: '20px', marginBottom: '20px' }}>
-          <h1 style={{ margin: '0 0 5px 0', fontSize: '32px', color: '#2c3e50' }}>
-            {personalData.fullName || 'Tu Nombre Completo'}
-          </h1>
-          <h2 style={{ margin: '0', fontSize: '20px', color: '#7f8c8d', fontWeight: 'normal' }}>
-            {personalData.profession || 'Tu Profesión o Especialidad'}
-          </h2>
+        {/* Cabecera actualizada que incluye la imagen de perfil redonda al lado del nombre */}
+        <header style={{ borderBottom: '2px solid #333', paddingBottom: '20px', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '25px' }}>
+          {personalData.profileImage && (
+            <img 
+              src={personalData.profileImage} 
+              alt="Foto de perfil" 
+              style={{ width: '120px', height: '120px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #eaeaea' }} 
+            />
+          )}
+          <div>
+            <h1 style={{ margin: '0 0 5px 0', fontSize: '32px', color: '#2c3e50' }}>
+              {personalData.fullName || 'Tu Nombre Completo'}
+            </h1>
+            <h2 style={{ margin: '0', fontSize: '20px', color: '#7f8c8d', fontWeight: 'normal' }}>
+              {personalData.profession || 'Tu Profesión o Especialidad'}
+            </h2>
+          </div>
         </header>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '40px' }}>
