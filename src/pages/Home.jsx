@@ -18,21 +18,21 @@ export default function Home() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '60px' }}>
         
         <div className="card-container" style={{ padding: '30px', borderRadius: '12px', textAlign: 'left' }}>
-          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', color: '#2c3e50' }}>📝 Editor Interactivo</h3>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', color: '#2c3e50' }}> Editor Interactivo</h3>
           <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>
             Completa tus datos personales, proyectos y educación en tiempo real sin perder información gracias al autoguardado en tu navegador.
           </p>
         </div>
         
         <div className="card-container" style={{ padding: '30px', borderRadius: '12px', textAlign: 'left' }}>
-          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', color: '#2c3e50' }}>📊 Dashboard Visual</h3>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', color: '#2c3e50' }}> Dashboard Visual</h3>
           <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>
             Tus habilidades técnicas se transforman automáticamente en una gráfica de barras dinámica, fácil de leer y muy profesional.
           </p>
         </div>
 
         <div className="card-container" style={{ padding: '30px', borderRadius: '12px', textAlign: 'left' }}>
-          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', color: '#2c3e50' }}>📄 Exportación PDF</h3>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', color: '#2c3e50' }}> Exportación PDF</h3>
           <p style={{ margin: 0, color: '#64748b', lineHeight: '1.5' }}>
             Con un solo clic, descarga tu currículum en formato A4 con márgenes perfectos, adaptado para los estándares de la industria.
           </p>
