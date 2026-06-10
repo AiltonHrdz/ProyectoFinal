@@ -4,7 +4,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 export const CVContext = createContext();
 
 export function CVProvider({ children }) {
-  // Estado inicial basado en los requerimientos del proyecto
+  // Estado inicial del CV, con estructura para datos personales, habilidades, proyectos y educación.
   const [cvData, setCvData] = useLocalStorage('devprofile_data', {
     personalData: {
       fullName: '',

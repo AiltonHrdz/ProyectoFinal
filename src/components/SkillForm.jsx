@@ -119,7 +119,6 @@ export default function SkillForm() {
         + Agregar Habilidad
       </button>
 
-      {/* Renderizado dinámico de la lista de habilidades */}
       {cvData.skills.length > 0 && (
         <div style={{ marginTop: '20px' }}>
           <h4 style={{ marginBottom: '10px' }}>Habilidades Registradas:</h4>

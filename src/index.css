@@ -28,7 +28,6 @@ body.dark-mode {
   color: #f1f5f9;
 }
 
-/* --- NAVEGACIÓN MODERNA Y CENTRADA --- */
 nav {
   position: sticky;
   top: 20px;
@@ -65,13 +64,11 @@ nav a:hover {
   background: rgba(99, 102, 241, 0.1);
 }
 
-/* Estilo para el link activo (opcional con NavLink) */
 nav a.active {
   background: var(--primary);
   color: white;
 }
 
-/* --- FORMULARIOS PREMIUM --- */
 fieldset {
   border: none !important;
   background: white;
@@ -124,7 +121,6 @@ input:focus {
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
 
-/* Botones con estilo moderno */
 button {
   background: var(--primary);
   color: white;

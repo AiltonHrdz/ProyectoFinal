@@ -28,7 +28,7 @@ export default function ProjectForm() {
       return;
     }
 
-    // --- VALIDACIÓN ESTRICTA DE URL (Puntos de Rúbrica) ---
+    //Validación de URLs (si se proporcionan)
     const urlPattern = /^(https?:\/\/)/; 
     
     if (repoLink && !urlPattern.test(repoLink)) {

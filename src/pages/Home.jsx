@@ -53,7 +53,7 @@ export default function Home() {
           fontWeight: 'bold',
           boxShadow: '0 10px 20px -5px rgba(111, 66, 193, 0.5)'
         }}>
-          ¡Comenzar a Crear mi CV! 🚀
+          CREAR MI CV AHORA
         </button>
       </Link>
 

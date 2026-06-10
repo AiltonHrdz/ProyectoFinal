@@ -32,7 +32,7 @@ export default function ThemeToggle() {
         zIndex: 1000
       }}
     >
-      {isDark ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
+      {isDark ? ' Modo Claro' : ' Modo Oscuro'}
     </button>
   );
 }

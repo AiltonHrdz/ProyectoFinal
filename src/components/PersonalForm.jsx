@@ -80,7 +80,6 @@ export default function PersonalForm() {
           />
         </div>
 
-        {/* Nuevo campo para la URL de la imagen de perfil */}
         <div style={{ gridColumn: '1 / -1' }}>
           <label style={{ display: 'block', marginBottom: '5px' }}>URL de Imagen de Perfil (Opcional):</label>
           <input
