@@ -15,6 +15,28 @@ export default function PersonalForm() {
     });
   };
 
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    
+    if (file) {
+      const reader = new FileReader();
+      
+      // Cuando termine de leer el archivo, actualizamos el estado global
+      reader.onloadend = () => {
+        setCvData({
+          ...cvData,
+          personalData: { 
+            ...cvData.personalData, 
+            profileImage: reader.result 
+          }
+        });
+      };
+      
+      // Le indicamos que lea el archivo como una URL de datos (Base64)
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <fieldset style={{ padding: '20px', borderRadius: '8px', border: '1px solid #ccc', marginBottom: '20px' }}>
       <legend style={{ fontWeight: 'bold', padding: '0 10px' }}>Datos Personales</legend>
@@ -80,16 +102,29 @@ export default function PersonalForm() {
           />
         </div>
 
-        <div style={{ gridColumn: '1 / -1' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>URL de Imagen de Perfil (Opcional):</label>
-          <input
-            type="url"
-            name="profileImage"
-            value={cvData.personalData.profileImage}
-            onChange={handleChange}
-            placeholder="Ej. https://tu-dominio.com/foto.jpg"
-            style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
-          />
+        <div style={{ marginBottom: '20px' }}>
+          <label>Imagen de Perfil (Pega una URL o sube una foto):</label>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '5px' }}>
+            
+            <input
+              type="text"
+              name="profileImage"
+              value={cvData.personalData.profileImage || ''}
+              onChange={handleChange}
+              placeholder="Ej. https://tu-dominio.com/foto.jpg"
+            />
+            
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageUpload}
+              style={{ 
+                padding: '9px 16px', 
+                cursor: 'pointer'
+              }}
+            />
+            
+          </div>
         </div>
 
         <div style={{ gridColumn: '1 / -1' }}>
