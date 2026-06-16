@@ -38,8 +38,8 @@ export default function Dashboard() {
       <p>Resumen visual de tus competencias técnicas registradas[cite: 122].</p>
 
       {skills.length === 0 ? (
-        <div style={{ padding: '20px', backgroundColor: '#f8f9fa', borderRadius: '8px', textAlign: 'center', border: '1px solid #eaeaea' }}>
-          <p>Aún no has agregado habilidades. Ve al Editor para registrarlas y ver tu gráfica.</p>
+        <div className="tarjeta-adaptable" style={{ padding: '30px', textAlign: 'center', borderRadius: '8px' }}>
+          <p style={{ margin: 0 }}>Aún no has agregado habilidades. Ve al Editor para registrarlas y ver tu gráfica.</p>
         </div>
       ) : (
         <div style={{ height: '400px', width: '100%', backgroundColor: '#fff', padding: '20px', borderRadius: '8px', border: '1px solid #eaeaea', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>

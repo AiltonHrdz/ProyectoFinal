@@ -137,3 +137,23 @@ button:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
 }
+
+.tarjeta-adaptable {
+  background-color: #ffffff;
+  color: #333333;
+}
+.caja-equipo {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.dark-mode .tarjeta-adaptable {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+.dark-mode .caja-equipo {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+.dark-mode h2.titulo-primario {
+  color: #818cf8 !important;
+  border-bottom-color: #334155 !important;
+}
