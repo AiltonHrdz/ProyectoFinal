@@ -7,6 +7,14 @@ export default function Preview() {
   const { personalData, skills, projects, education } = cvData;
 
   const handleExportPDF = () => {
+    // 1. Verificamos si el modo oscuro está activo en el body
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
+    // 2. Si está activo, lo quitamos temporalmente
+    if (isDarkMode) {
+      document.body.classList.remove('dark-mode');
+    }
+
     const element = document.getElementById('cv-preview-container');
     
     const opt = {
@@ -17,7 +25,13 @@ export default function Preview() {
       jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    html2pdf().set(opt).from(element).save();
+    // 3. Generamos el PDF y usamos .then() para esperar a que termine
+    html2pdf().set(opt).from(element).save().then(() => {
+      // 4. Una vez guardado el archivo, restauramos el modo oscuro si estaba activo
+      if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+      }
+    });
   };
 
   return (
